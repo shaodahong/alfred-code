@@ -17,7 +17,7 @@ const emptyOutput = recentWorkspace
     const title = file.replace(/.*\//i, "");
     return {
       title: title,
-      subtitle: file,
+      subtitle: file.replace("file://", ""),
       arg: file,
     };
   })
