@@ -3,8 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "prepublishOnly": "np --yolo --no-publish"
+  },
   "dependencies": {
     "alfred-notifier": "^0.2.3",
     "alfy": "^0.10.0"
+  },
+  "devDependencies": {
+    "np": "^7.4.0"
   }
 }
