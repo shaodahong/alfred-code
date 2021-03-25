@@ -6,7 +6,33 @@
 	<string>com.shaodahong.code</string>
 	<key>connections</key>
 	<dict>
+		<key>048DDB02-882B-4A8A-80F9-2B3B68428E78</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6CD6229E-1F04-4413-B0A0-CFD2336A220E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>6CD6229E-1F04-4413-B0A0-CFD2336A220E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DEEBD8CC-79D5-4301-99CF-2C872B548DDE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>854C6010-0987-4E5E-A9FC-ECEEC7C5D233</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -32,6 +58,37 @@
 	<string>Code</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>048DDB02-882B-4A8A-80F9-2B3B68428E78</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -104,29 +161,123 @@
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>anchorfields</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>daterange</key>
+				<integer>0</integer>
+				<key>fields</key>
+				<array>
+					<dict>
+						<key>field</key>
+						<string>kMDItemDisplayName</string>
+						<key>not</key>
+						<false/>
+						<key>split</key>
+						<true/>
+						<key>value</key>
+						<string>{query}</string>
+						<key>words</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>field</key>
+						<string>kMDItemAlternateNames</string>
+						<key>not</key>
+						<false/>
+						<key>split</key>
+						<true/>
+						<key>value</key>
+						<string>{query}</string>
+						<key>words</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>field</key>
+						<string>kMDItemFinderComment</string>
+						<key>not</key>
+						<false/>
+						<key>split</key>
+						<true/>
+						<key>value</key>
+						<string>{query}</string>
+						<key>words</key>
+						<true/>
+					</dict>
+				</array>
+				<key>includesystem</key>
+				<false/>
+				<key>keyword</key>
+				<string>code</string>
+				<key>limit</key>
+				<integer>0</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>scopes</key>
+				<array/>
+				<key>sortmode</key>
+				<integer>0</integer>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>types</key>
+				<array/>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.filefilter</string>
+			<key>uid</key>
+			<string>854C6010-0987-4E5E-A9FC-ECEEC7C5D233</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>6CD6229E-1F04-4413-B0A0-CFD2336A220E</key>
+		<key>048DDB02-882B-4A8A-80F9-2B3B68428E78</key>
 		<dict>
 			<key>xpos</key>
-			<integer>130</integer>
+			<integer>50</integer>
 			<key>ypos</key>
-			<integer>10</integer>
+			<integer>100</integer>
 		</dict>
-		<key>DEEBD8CC-79D5-4301-99CF-2C872B548DDE</key>
+		<key>6CD6229E-1F04-4413-B0A0-CFD2336A220E</key>
 		<dict>
 			<key>xpos</key>
 			<integer>300</integer>
 			<key>ypos</key>
-			<integer>10</integer>
+			<integer>100</integer>
+		</dict>
+		<key>854C6010-0987-4E5E-A9FC-ECEEC7C5D233</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<integer>255</integer>
+		</dict>
+		<key>DEEBD8CC-79D5-4301-99CF-2C872B548DDE</key>
+		<dict>
+			<key>xpos</key>
+			<integer>610</integer>
+			<key>ypos</key>
+			<integer>170</integer>
 		</dict>
 	</dict>
+	<key>variablesdontexport</key>
+	<array/>
 	<key>version</key>
 	<string></string>
 	<key>webaddress</key>
-	<string></string>
+	<string>https://github.com/shaodahong/alfred-code</string>
 </dict>
 </plist>

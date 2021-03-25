@@ -5,6 +5,8 @@
   "license": "MIT",
   "repository": "git@github.com:shaodahong/alfred-code.git",
   "scripts": {
+    "postinstall": "alfy-init",
+    "preuninstall": "alfy-cleanup",
     "prepublishOnly": "np --yolo --no-publish"
   },
   "dependencies": {

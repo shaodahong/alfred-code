@@ -11,6 +11,10 @@ const codeCacheJson = require(codeCachePath);
 let emptyOutput = [];
 
 try {
+  if (alfy.input) {
+    return;
+  }
+
   emptyOutput = [...codeCacheJson.lastKnownMenubarData.menus.File.items]
     .find(({ id }) => id === "submenuitem.25")
     .submenu.items.filter(({ uri }) => !!uri)
