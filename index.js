@@ -1,28 +1,31 @@
 const os = require("os");
 const alfy = require("alfy");
 const alfredNotifier = require("alfred-notifier");
-const { title } = require("process");
 
 // Checks for available update and updates the `info.plist`
 alfredNotifier();
 
 const userHomeDir = os.homedir();
-const codeCachePath = `${userHomeDir}/Library/Application Support/Code/Backups/workspaces.json`;
+const codeCachePath = `${userHomeDir}/Library/Application Support/Code/storage.json`;
 const codeCacheJson = require(codeCachePath);
+let emptyOutput = [];
 
-const recentWorkspace = [...codeCacheJson.folderURIWorkspaces].filter(Boolean);
-
-const emptyOutput = recentWorkspace
-  .map(file => {
-    const title = file.replace(/.*\//i, "");
-    return {
-      title: title,
-      subtitle: file.replace("file://", ""),
-      arg: file,
-    };
-  })
-  // Because latest recent in bottom
-  .reverse();
+try {
+  emptyOutput = [...codeCacheJson.lastKnownMenubarData.menus.File.items]
+    .find(({ id }) => id === "submenuitem.25")
+    .submenu.items.filter(({ uri }) => !!uri)
+    .map(({ uri }) => {
+      const path = uri.path;
+      const title = path.replace(/.*\//i, "");
+      return {
+        title: title,
+        subtitle: path.replace("file://", ""),
+        arg: path,
+      };
+    });
+} catch (error) {
+  alfy.log(error);
+}
 
 alfy.output(
   alfy.inputMatches(emptyOutput, (item, input) => {
