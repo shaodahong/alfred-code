@@ -22,7 +22,7 @@ try {
       const path = uri.path;
       const title = path.replace(/.*\//i, "");
       return {
-        title: title,
+        title,
         subtitle: path.replace("file://", ""),
         arg: path,
       };
