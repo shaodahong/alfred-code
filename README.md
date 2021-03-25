@@ -16,3 +16,9 @@ $ npm install --global alfred-code
 ## Usage
 
 In Alfred, type `code`, list recent workspace and <kbd>Enter</kbd> open new [Code](https://code.visualstudio.com/) window with workspace.
+
+## Environment Variables
+
+| name     | default value | description                                |
+| -------- | ------------- | ------------------------------------------ |
+| insiders | -             | Set `1` will use `code-insiders` open file |
