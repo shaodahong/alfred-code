@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "repository": "git@github.com:shaodahong/alfred-code.git",
+  "description": "Use Alfred to quickly open the file in Code",
   "scripts": {
     "postinstall": "alfy-init",
     "preuninstall": "alfy-cleanup",
