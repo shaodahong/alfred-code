@@ -22,3 +22,9 @@ In Alfred, type `code`, list recent workspace and <kbd>Enter</kbd> open new [Cod
 | name     | default value | description                                |
 | -------- | ------------- | ------------------------------------------ |
 | insiders | -             | Set `1` will use `code-insiders` open file |
+
+## FAQ
+
+### `code` or `code-insiders` command not found
+
+https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
