@@ -5,6 +5,11 @@
   "license": "MIT",
   "repository": "git@github.com:shaodahong/alfred-code.git",
   "description": "Use Alfred to quickly open the file in Code",
+  "author": {
+    "name": "shaodahong",
+    "email": "darryshaw@gmail.com",
+    "url": "https://github.com/shaodahong/alfred-code"
+  },
   "scripts": {
     "postinstall": "alfy-init",
     "preuninstall": "alfy-cleanup",

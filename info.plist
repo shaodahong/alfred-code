@@ -249,7 +249,7 @@ Use Alfred to quickly open the file in Code</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>Use Alfred to quickly open the file in Code</string>
 	<key>uidata</key>
 	<dict>
 		<key>048DDB02-882B-4A8A-80F9-2B3B68428E78</key>
@@ -281,10 +281,8 @@ Use Alfred to quickly open the file in Code</string>
 			<integer>170</integer>
 		</dict>
 	</dict>
-	<key>variablesdontexport</key>
-	<array/>
 	<key>version</key>
-	<string></string>
+	<string>1.0.5</string>
 	<key>webaddress</key>
 	<string>https://github.com/shaodahong/alfred-code</string>
 </dict>
