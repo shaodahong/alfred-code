@@ -16,7 +16,7 @@ try {
   }
 
   emptyOutput = [...codeCacheJson.lastKnownMenubarData.menus.File.items]
-    .find(({ id }) => id === "submenuitem.25")
+    .find(({ label }) => label === "Open &&Recent")
     .submenu.items.filter(({ uri }) => !!uri)
     .map(({ uri }) => {
       const path = uri.path;
