@@ -1,13 +1,21 @@
 const os = require("os");
 const alfy = require("alfy");
 const alfredNotifier = require("alfred-notifier");
+const fs = require("fs");
 
 // Checks for available update and updates the `info.plist`
 alfredNotifier();
 
 const userHomeDir = os.homedir();
 const codeCachePath = `${userHomeDir}/Library/Application Support/Code/storage.json`;
-const codeCacheJson = require(codeCachePath);
+const newCodeCachePath = `${userHomeDir}/Library/Application Support/Code/User/globalStorage/storage.json`;
+let codeCacheJson;
+
+try {
+  codeCacheJson = require(codeCachePath);
+} catch (error) {
+  codeCacheJson = require(newCodeCachePath);
+}
 let emptyOutput = [];
 
 try {
